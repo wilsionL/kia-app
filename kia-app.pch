@@ -1,0 +1,27 @@
+//
+//  kia-app.pch
+//  kia-app
+//
+//  Created by jieyeh on 14/10/29.
+//  Copyright (c) 2014年 jieyeh. All rights reserved.
+//
+
+#ifndef kia_app_kia_app_pch
+#define kia_app_kia_app_pch
+#import "AppDelegate.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//#define WEBSERVICE_URL @"http://115.29.179.142:8060/DYKAppWebService.asmx"
+//#define WEBSERVICE_URL @"http://58.240.2.232:8080/DYKAppWebService.asmx"
+#define WEBSERVICE_URL @"http://61.177.250.156:8088/DYKAppWebService.asmx"
+#define URL_UPDATE_VERSION @"itms-services://?action=download-manifest&url=https://58.240.2.232:8080/app/kia-app.plist"
+#define LOGIN_INFO_KEY @"kia-app.login-info"
+#define COOKIE_NAME @"LoginUserInfo"
+#define DEVICERECT [[UIScreen mainScreen] bounds]
+#define FONTCOLOR 0xBBBAC2aa
+#define LINECOLOR 0xEFEFF4aa
+#define OVERLAYCOLOR 0x00000033
+
+#endif

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="EditClueTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yhu-0H-E2H">
+                        <rect key="frame" x="8" y="2" width="147" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="147" id="Arl-7x-Vlv"/>
+                            <constraint firstAttribute="height" constant="36" id="IST-vB-t2e"/>
+                        </constraints>
+                        <state key="normal" title="客户已到店" backgroundImage="btn_selected">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="btnInEvent:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="t4d-q7-dFH"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZD-8B-Lfk">
+                        <rect key="frame" x="165" y="4" width="147" height="36"/>
+                        <state key="normal" title="客户未到店" backgroundImage="btn_unselected">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="selected" image="btn_selected"/>
+                        <connections>
+                            <action selector="btnLeaveEvent:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dm7-pX-Fhj"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yhu-0H-E2H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="9nP-IX-kCk"/>
+                    <constraint firstItem="yhu-0H-E2H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-6" id="qr7-Vm-yGv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="btnIn" destination="yhu-0H-E2H" id="z9q-fd-dAD"/>
+                <outlet property="btnLeave" destination="CZD-8B-Lfk" id="X2J-3P-T9X"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="btn_selected" width="147" height="36"/>
+        <image name="btn_unselected" width="147" height="36"/>
+    </resources>
+</document>
